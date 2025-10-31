@@ -12,7 +12,7 @@
     <script>
         MathJax = {
           tex: {
-            inlineMath: [['\\(', '\\)']], // 인라인 수식은 \( ... \)
+            inlineMath: [['\\(', '\\)']], // 인라인 수식은 \( ... \)만 사용
             displayMath: [['\\[', '\\]']] // 블록 수식은 \[ ... \]
           }
         };
@@ -27,7 +27,7 @@
             <div class="puzzle-box active" id="puzzle-1">
                 <h2>[관문 1] 합성함수의 금고 (3자리 비밀번호)</h2>
                 <div class="problem">
-                    <p>함수 \({f(x) = 2x - 3}\), \({g(x) = x^2 + 1}\), \({h(x) = 5 - x}\) 가 있습니다.</p>
+                    <p>함수 \(\text{f(x) = 2x - 3}\), \(\text{g(x) = x^2 + 1}\), \(\text{h(x) = 5 - x}\) 가 있습니다.</p>
                     <p>A: \(f(4)\)의 값</p>
                     <p>B: \((g \circ f)(3)\)의 값</p>
                     <p>C: \(\left|(f \circ h)(5)\right|\)의 값 (절댓값)</p>
@@ -42,7 +42,7 @@
             <div class="puzzle-box" id="puzzle-2">
                 <h2>[관문 2] 역함수의 열쇠 (유리함수 k 값)</h2>
                 <div class="problem">
-                    <p>함수 \({f(x) = \frac{1}{2}x + 4}\) 가 주어졌습니다.</p>
+                    <p>함수 \(\text{f(x) = \frac{1}{2}x + 4}\) 가 주어졌습니다.</p>
                     <p>\(f^{-1}(7)\)의 값을 구하시오. 이 값이 다음 유리함수의 \(\mathbf{k}\) 값입니다.</p>
                 </div>
                 <input type="text" id="answer-2" placeholder="숫자 입력">
@@ -84,5 +84,4 @@
     </div>
     <script src="script.js"></script>
 </body>
-
 </html>
