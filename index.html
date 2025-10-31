@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>함수 마법서 탈출 게임</title>
     <link rel="stylesheet" href="style.css">
+    
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
     <div class="container">
@@ -15,53 +18,53 @@
             <div class="puzzle-box active" id="puzzle-1">
                 <h2>[관문 1] 합성함수의 금고 (3자리 비밀번호)</h2>
                 <div class="problem">
-                    <p>함수 $f(x) = 2x - 3$, $g(x) = x^2 + 1$, $h(x) = 5 - x$ 가 있습니다.</p>
-                    <p>A: $f(4)$의 값</p>
-                    <p>B: $(g \circ f)(3)$의 값</p>
-                    <p>C: $|(f \circ h)(5)|$의 값 (절댓값)</p>
+                    <p>함수 $\(f(x) = 2x - 3\)$, $\(g(x) = x^2 + 1\)$, $\(h(x) = 5 - x\)$ 가 있습니다.</p>
+                    <p>A: $\(f(4)\)$의 값</p>
+                    <p>B: $\((g \circ f)(3)\)$의 값</p>
+                    <p>C: $\(|(f \circ h)(5)|\)$의 값 (절댓값)</p>
                     <p>금고 비밀번호는 A, B, C를 순서대로 나열한 3자리 숫자입니다.</p>
                 </div>
                 <input type="text" id="answer-1" placeholder="3자리 숫자 입력 (예: 123)">
                 <button onclick="checkAnswer(1)">힌트 확인</button>
                 <p id="feedback-1" class="feedback"></p>
-                <p id="hint-1" class="concept-hint hidden">💡 **개념 힌트:** 합성함수 $(g \circ f)(x)$는 $g(f(x))$로, **안쪽 함수 $f(x)$**부터 계산해야 합니다.</p>
+                <p id="hint-1" class="concept-hint hidden">💡 **개념 힌트:** 합성함수 $\((g \circ f)(x)\)$는 $\(g(f(x))\)$임을 기억하고, **안쪽 함수 $\(f(x)\)$**부터 먼저 계산하는 것을 잊지 마세요.</p>
             </div>
 
             <div class="puzzle-box" id="puzzle-2">
                 <h2>[관문 2] 역함수의 열쇠 (유리함수 k 값)</h2>
                 <div class="problem">
-                    <p>함수 $f(x) = \frac{1}{2}x + 4$ 가 주어졌습니다.</p>
-                    <p>$f^{-1}(7)$의 값을 구하시오. 이 값이 다음 유리함수의 $\mathbf{k}$ 값입니다.</p>
+                    <p>함수 $\(f(x) = \frac{1}{2}x + 4\)$ 가 주어졌습니다.</p>
+                    <p>$\(f^{-1}(7)\)$의 값을 구하시오. 이 값이 다음 유리함수의 $\mathbf{k}$ 값입니다.</p>
                 </div>
                 <input type="text" id="answer-2" placeholder="숫자 입력">
                 <button onclick="checkAnswer(2)">힌트 확인</button>
                 <p id="feedback-2" class="feedback"></p>
-                <p id="hint-2" class="concept-hint hidden">💡 **개념 힌트:** $f^{-1}(b)=a$는 $f(a)=b$와 같습니다. 결과 값 $7$이 나오도록 하는 **원래 함수 $f(x)$의 입력 값**을 찾아보세요.</p>
+                <p id="hint-2" class="concept-hint hidden">💡 **개념 힌트:** $\(f^{-1}(b)=a\)$는 $\(f(a)=b\)$와 같습니다. 결과 값 $7$이 나오도록 하는 **원래 함수 $\(f(x)\)$의 입력 값**을 찾아보세요.</p>
             </div>
 
             <div class="puzzle-box" id="puzzle-3">
                 <h2>[관문 3] 유리함수의 키워드</h2>
                 <div class="problem">
-                    <p>이전 관문에서 얻은 $\mathbf{k}$ 값을 이용하여, 함수 $y = \frac{3x + k}{x - 2}$ 가 지나는 **사분면의 개수**를 구하시오.</p>
+                    <p>이전 관문에서 얻은 $\mathbf{k}$ 값을 이용하여, 함수 $\(y = \frac{3x + k}{x - 2}\)$ 가 지나는 **사분면의 개수**를 구하시오.</p>
                     <p>정답이 **3**이면 'START', **4**이면 'ESCAPE' 입니다. (정답은 숫자만 입력)</p>
                 </div>
                 <input type="text" id="answer-3" placeholder="숫자 입력 (3 또는 4)">
                 <button onclick="checkAnswer(3)">힌트 확인</button>
                 <p id="feedback-3" class="feedback"></p>
-                <p id="hint-3" class="concept-hint hidden">💡 **개념 힌트:** 유리함수를 표준형 $y = \frac{k'}{x-p} + q$로 변형하고, **점근선**의 교점 $(p, q)$와 $\mathbf{k'}$의 부호를 확인하여 그래프를 그려보세요.</p>
+                <p id="hint-3" class="concept-hint hidden">💡 **개념 힌트:** 유리함수를 표준형 $\(y = \frac{k'}{x-p} + q\)$로 변형하고, **점근선**의 교점 $\((p, q)\)$와 $\mathbf{k'}$의 부호를 확인하여 그래프를 그려보세요.</p>
             </div>
 
             <div class="puzzle-box" id="puzzle-4">
                 <h2>[최종 관문] 무리함수의 최종 좌표</h2>
                 <div class="problem">
                     <p>이전 관문의 키워드 'START'를 (A=4, B=7)로 가정합니다.</p>
-                    <p>무리함수 $y = \sqrt{-(x - A)} + B$ 의 **정의역**을 구하시오.</p>
-                    <p>최종 탈출 좌표는 정의역의 최댓값인 $x \le \mathbf{M}$ 일 때의 **M** 값입니다.</p>
+                    <p>무리함수 $\(y = \sqrt{-(x - A)} + B\)$ 의 **정의역**을 구하시오.</p>
+                    <p>최종 탈출 좌표는 정의역의 최댓값인 $\(x \le \mathbf{M}\)$ 일 때의 **M** 값입니다.</p>
                 </div>
                 <input type="text" id="answer-4" placeholder="최종 좌표 숫자 M 입력">
                 <button onclick="checkAnswer(4)">탈출 시도</button>
                 <p id="feedback-4" class="feedback"></p>
-                <p id="hint-4" class="concept-hint hidden">💡 **개념 힌트:** 무리함수의 정의역은 **근호 안의 식의 값이 0 이상**이 되도록 하는 $x$의 범위입니다. $-(x-4) \ge 0$을 풀어보세요.</p>
+                <p id="hint-4" class="concept-hint hidden">💡 **개념 힌트:** 무리함수의 정의역은 **근호 안의 식의 값이 0 이상**이 되도록 하는 $\(x\)$의 범위입니다. $\(-(x-4) \ge 0\)$을 풀어보세요.</p>
             </div>
             
             <div id="escape-success" class="hidden">
