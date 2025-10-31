@@ -2,7 +2,7 @@
 const CORRECT_ANSWERS = {
     1: "5103", // A=5, B=10, C=3 (절댓값 처리) -> 5103
     2: "6",    // f⁻¹(7) = 6. 이 값이 다음 문제의 k
-    3: "3",    // k=6일 때 사분면 개수는 3개
+    3: "4",    // k=6일 때 사분면 개수는 4개
     4: "4"     // A=4, B=7일 때 정의역 x ≤ 4. 최종 M=4
 };
 // 각 문제별 오답 횟수를 저장
@@ -67,4 +67,5 @@ function moveToNextPuzzle(current) {
         // 입력 필드 초기화
         document.getElementById(`answer-${next}`).value = '';
     }
+
 }
