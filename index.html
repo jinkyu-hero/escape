@@ -55,7 +55,7 @@
                 <h2>[관문 3] 유리함수의 키워드</h2>
                 <div class="problem">
                     <p>이전 관문에서 얻은 \(\mathbf{k}\) 값을 이용하여, 함수 \(y = \frac{3x + k}{x - 2}\) 가 지나는 <strong>사분면의 개수</strong>를 구하시오.</p>
-                    <p>정답이 **3**이면 'START', **4**이면 'ESCAPE' 입니다. (정답은 숫자만 입력)</p>
+                    <p>정답이 **3**이면 'START' (이 값이 문제 4의 \(\mathbf{k}\) 값), **4**이면 'ESCAPE' 입니다. (정답은 숫자만 입력)</p>
                 </div>
                 <input type="text" id="answer-3" placeholder="숫자 입력 (3 또는 4)">
                 <button onclick="checkAnswer(3)">힌트 확인</button>
@@ -64,16 +64,20 @@
             </div>
 
             <div class="puzzle-box" id="puzzle-4">
-                <h2>[최종 관문] 무리함수의 최종 좌표</h2>
+                <h2>[최종 관문] 그래프 개형 코드 (M)</h2>
                 <div class="problem">
-                    <p>이전 관문의 키워드 'START, ESCAPE' 중 A의 위치가 A값.</p>
-                    <p>무리함수 \(y = \sqrt{-(x - A)} + B\) 의 <strong>정의역</strong>을 구하시오.</p>
-                    <p>최종 탈출 좌표는 정의역의 최댓값인 \(x \le \mathbf{M}\) 일 때의 <strong>M</strong> 값입니다.</p>
+                    <p>이전 관문 3의 정답(\(3\))을 상수항 \(\mathbf{k}\) 값으로 하는 이차함수 \(f(x) = x^2 - 4x + \mathbf{k}\)의 그래프가 \(x\)축과 만나는 점의 개수를 구하시오.</p>
+                    <p>이 개수가 최종 탈출 코드 \(\mathbf{M}\) 값입니다.</p>
+                    <ul>
+                        <li>서로 다른 두 점: **2**</li>
+                        <li>한 점(접함): **1**</li>
+                        <li>만나지 않음: **0**</li>
+                    </ul>
                 </div>
-                <input type="text" id="answer-4" placeholder="최종 좌표 숫자 M 입력">
+                <input type="text" id="answer-4" placeholder="최종 코드 M 입력 (0, 1 또는 2)">
                 <button onclick="checkAnswer(4)">탈출 시도</button>
                 <p id="feedback-4" class="feedback"></p>
-                <p id="hint-4" class="concept-hint hidden">💡 <strong>개념 힌트:</strong> 무리함수의 정의역은 <strong>근호 안의 식의 값이 0 이상</strong>이 되도록 하는 \(x\)의 범위입니다. \( -(x-4) \ge 0\)을 풀어보세요.</p>
+                <p id="hint-4" class="concept-hint hidden">💡 <strong>개념 힌트:</strong> 이차함수와 \(x\)축의 교점 개수는 이차방정식 \(f(x)=0\)의 **판별식** \(D = b^2 - 4ac\)의 부호로 결정됩니다.</p>
             </div>
             
             <div id="escape-success" class="hidden">
@@ -85,4 +89,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-
