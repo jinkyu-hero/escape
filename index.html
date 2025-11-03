@@ -25,15 +25,15 @@
 
         <div id="game-area">
             <div class="puzzle-box active" id="puzzle-1">
-                <h2>[관문 1] 합성함수의 금고 (3자리 비밀번호)</h2>
+                <h2>[관문 1] 합성함수의 금고 (4자리 비밀번호)</h2>
                 <div class="problem">
                     <p>함수 \(f(x) = 2x - 3\), \(g(x) = x^2 + 1\), \(h(x) = 5 - x\) 가 있습니다.</p>
                     <p>A: \(f(4)\)의 값</p>
                     <p>B: \((g \circ f)(3)\)의 값</p>
                     <p>C: \(\left|(f \circ h)(5)\right|\)의 값 (절댓값)</p>
-                    <p>금고 비밀번호는 A, B, C를 순서대로 나열한 3자리 숫자입니다.</p>
+                    <p>금고 비밀번호는 A, B, C를 순서대로 나열한 4자리 숫자입니다.</p>
                 </div>
-                <input type="text" id="answer-1" placeholder="3자리 숫자 입력 (예: 123)">
+                <input type="text" id="answer-1" placeholder="4자리 숫자 입력 (예: 123)">
                 <button onclick="checkAnswer(1)">힌트 확인</button>
                 <p id="feedback-1" class="feedback"></p>
                 <p id="hint-1" class="concept-hint hidden">💡 <strong>개념 힌트:</strong> 합성함수 \((g \circ f)(x)\)는 \(g(f(x))\)임을 기억하고, <strong>안쪽 함수 \(f(x)\)</strong>부터 먼저 계산하는 것을 잊지 마세요.</p>
@@ -85,6 +85,7 @@
     <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
